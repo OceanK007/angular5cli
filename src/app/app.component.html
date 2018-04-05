@@ -1,0 +1,15 @@
+<header>
+	<div>Welcome to {{title}} | Env. : {{environment}}</div>	
+	<div>
+		<!-- activeButton belongs as variable in app.component.ts and will be created dynamically -->
+		<a id="home" [routerLink]="['home']" class="btn btn-primary" [ngClass]="{'active': (activeButton=='home' || activeButton == null)}" (click)="activeButton='home'">Home</a>
+		<a [routerLink]="['register']" class="btn btn-primary" [ngClass]="{'active': activeButton=='register'}" (click)="activeButton='register'">Register</a>
+		<a [routerLink]="['user']" class="btn btn-primary" [ngClass]="{'active': activeButton=='user'}" (click)="activeButton='user'">User</a>
+		<a [routerLink]="['post']" class="btn btn-primary" [ngClass]="{'active': activeButton=='post'}" (click)="activeButton='post'">Post</a>
+	</div>
+</header>
+<body>
+	<div>
+		<router-outlet></router-outlet>
+	</div>
+</body>
