@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgForm, FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { User } from './register.user';
 
 @Component
@@ -9,13 +9,15 @@ import { User } from './register.user';
   styleUrls: ['./register.component.css'],
   providers: [User]
 })
-export class RegisterComponent 
+export class RegisterComponent implements OnInit
 {
   public registrationForm: FormGroup;   // This name must be same as u defined in <form [formGroup]="registrationForm">
   public userDetails: User;
   public userDetails2: User;
   
-  constructor(private formBuilder: FormBuilder) 
+  constructor(private formBuilder: FormBuilder) { }
+
+  ngOnInit()
   {
     this.createForm();
   }
@@ -46,7 +48,7 @@ export class RegisterComponent
     //console.log("2");
   }
 
-  registrationFormSubmit(registerForm: NgForm) 
+  registrationFormSubmit(registerForm: FormGroup) 
   {
     alert("Hi");
     console.log(registerForm);
