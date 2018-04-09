@@ -11,5 +11,5 @@ export class AppComponent
 {
   title = 'Angular';
   activeButton : string;
-  activeEnvironment: string = environment.env;
+  activeEnvironment: string = environment.envName;
 }

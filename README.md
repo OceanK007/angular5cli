@@ -35,9 +35,10 @@ Add in "styles.css"
 npm install             // To update the packages
 npm start               // To start project
 ng build                // To build project
-ng serve                // To start project
+ng serve                // To start project (default env: dev)
 ng build --prod         // To build project in production mode
-ng serve --prod         // To start project in production mode
+ng serve --prod || ng serve --environment prod ||  ng s -e prod     // To start project in production mode
+ng serve --environment qa      // To start custom environment (ng serve --qa command doesn't work with custom environments)
 
 #### Angular Data Access Modifiers ####
 * public

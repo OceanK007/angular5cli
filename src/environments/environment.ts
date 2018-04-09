@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  env: 'dev',
+  envName: 'dev',
   URL_LINK: 
   {
     API_BASE: 'http://jsonplaceholder.typicode.com'
