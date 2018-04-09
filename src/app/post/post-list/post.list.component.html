@@ -8,6 +8,7 @@
                 <th>User Id</th>
                 <th>Title</th>
                 <th>Body</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -16,7 +17,12 @@
                 <td>{{post.userId}}</td>
                 <td>{{post.title}}</td>
                 <td>{{post.body}}</td>
+                <td><button [routerLink]="['view', post.id]">Detail</button></td>
             </tr>
         </tbody>
     </table>
+
+    <div>
+        <router-outlet></router-outlet>
+    </div>
 </div>

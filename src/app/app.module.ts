@@ -10,7 +10,6 @@ import { HomeModule } from './home/home.module';
 import { RegisterModule } from './register/register.module';
 import { UserModule } from './user/user.module';
 import { PostModule } from './post/post.module';
-import { environment } from '../environments/environment';
 
 @NgModule
 ({

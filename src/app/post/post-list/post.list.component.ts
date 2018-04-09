@@ -7,7 +7,7 @@ import { PostServiceObservable } from '../post.service.observable'
 ({
     templateUrl: './post.list.component.html'
 })
-export class PostListComponent
+export class PostListComponent implements OnInit
 {
     posts: Observable<any>;
     public postList: Array<any> = [];

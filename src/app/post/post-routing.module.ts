@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PostComponent } from './post.component';
 import { PostListComponent } from './post-list/post.list.component';
+import { PostDetailComponent } from './post-detail/post.detail.component';
 
 const postRoutes: Routes = 
 [
@@ -13,7 +14,14 @@ const postRoutes: Routes =
         [
             {
                 path: "list",
-                component: PostListComponent
+                component: PostListComponent,
+                children:
+                [
+                    {
+                        path: "view/:postId",
+                        component: PostDetailComponent
+                    }
+                ]
             }
         ]
     },

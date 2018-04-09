@@ -37,4 +37,11 @@ export class PostServiceObservable
            console.log(data);
         });*/
     }
+
+    getPostById(id: number)
+    {
+        debugger;
+        console.log(id);
+        return this.http.get(this.baseUrl + '/posts/'+ id, this.options).catch(this.handleError);
+    }
 }
