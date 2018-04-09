@@ -32,8 +32,12 @@ Add in "styles.css"
     @import "~bootstrap/dist/css/bootstrap.css"
 
 #### To start the project #####
-npm install     // To update the packages
-npm start       // To start project
+npm install             // To update the packages
+npm start               // To start project
+ng build                // To build project
+ng serve                // To start project
+ng build --prod         // To build project in production mode
+ng serve --prod         // To start project in production mode
 
 #### Angular Data Access Modifiers ####
 * public

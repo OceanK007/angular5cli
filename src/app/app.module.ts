@@ -10,6 +10,7 @@ import { HomeModule } from './home/home.module';
 import { RegisterModule } from './register/register.module';
 import { UserModule } from './user/user.module';
 import { PostModule } from './post/post.module';
+import { environment } from '../environments/environment';
 
 @NgModule
 ({
@@ -28,7 +29,7 @@ import { PostModule } from './post/post.module';
   [
     AppComponent
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { } 

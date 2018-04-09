@@ -1,6 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpInterceptor, HttpRequest, HttpHandler, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { environment } from '../../environments/environment';
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -11,7 +12,7 @@ export class PostServiceObservable
 {
     headers: HttpHeaders;
     options: any;
-    baseUrl = 'http://jsonplaceholder.typicode.com';
+    baseUrl = environment.URL_LINK.API_BASE;
         
     constructor (private http: HttpClient) 
     {

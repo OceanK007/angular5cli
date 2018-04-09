@@ -1,5 +1,5 @@
 <header>
-	<div>Welcome to {{title}} | Env. : {{environment}}</div>	
+	<div>Welcome to {{title}} | Env. : {{activeEnvironment}}</div>	
 	<div>
 		<!-- activeButton belongs as variable in app.component.ts and will be created dynamically -->
 		<a id="home" [routerLink]="['home']" class="btn btn-primary" [ngClass]="{'active': (activeButton=='home' || activeButton == null)}" (click)="activeButton='home'">Home</a>
