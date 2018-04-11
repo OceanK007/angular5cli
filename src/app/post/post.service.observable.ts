@@ -38,10 +38,9 @@ export class PostServiceObservable
         });*/
     }
 
-    getPostById(id: number)
+    getPostById(id: number) : Observable<any>
     {
-        debugger;
-        console.log(id);
-        return this.http.get(this.baseUrl + '/posts/'+ id, this.options).catch(this.handleError);
+        //debugger;
+        return this.http.get(this.baseUrl + '/posts/'+id, this.options).catch(this.handleError);
     }
 }

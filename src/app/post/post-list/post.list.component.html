@@ -11,8 +11,11 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
-            <tr *ngFor='let post of postList'>
+        <tbody>                
+            <!-- We use the async pipe to automatically subscribe/unsubscribe to our observable -->
+            <!-- async pipe, it should wait for the data to come before displaying it -->
+            <tr *ngFor='let post of posts | async'>  
+            <!-- <tr *ngFor='let post of postList'> -->
                 <td>{{post.id}}</td>
                 <td>{{post.userId}}</td>
                 <td>{{post.title}}</td>

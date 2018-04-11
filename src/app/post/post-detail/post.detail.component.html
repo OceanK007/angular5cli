@@ -1,1 +1,7 @@
-details
+<div>Post Details</div>
+<div *ngIf="postDetail">
+    <div>{{postDetail.id}}</div>
+    <div>{{postDetail.userId}}</div>
+    <div>{{postDetail.title}}</div>
+    <div>{{postDetail.body}}</div>
+</div>

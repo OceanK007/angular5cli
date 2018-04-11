@@ -210,6 +210,8 @@ https://codecraft.tv/courses/angular/http/http-with-observables/
 https://github.com/jeroenouw/AngularREST/blob/master/src/app/rest-observable/rest-observable.service.ts
 https://www.concretepage.com/angular-2/angular-observable-example
 https://medium.com/codingthesmartway-com-blog/angular-4-3-httpclient-accessing-rest-web-services-with-angular-2305b8fd654b
+https://medium.com/@luukgruijs/understanding-creating-and-subscribing-to-observables-in-angular-426dbf0b04a3
+https://www.concretepage.com/angular-2/angular-observable-example
 
 * For setting different environment:
 http://tattoocoder.com/angular-cli-using-the-environment-option/

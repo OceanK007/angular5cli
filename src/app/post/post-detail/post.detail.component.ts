@@ -3,49 +3,44 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 import { PostServiceObservable } from '../post.service.observable'
+import { Post } from '../post';
 
 @Component
 ({
     templateUrl: './post.detail.component.html'
 })
-export class PostDetailComponent implements OnInit
+export class PostDetailComponent
 {
     posts: Observable<any>;
     parameters: Params;
-    public postList: Array<any> = [];
+    public postDetail: Post;
  
     constructor(private postServiceObservable : PostServiceObservable, private route: ActivatedRoute) 
     { 
-        
-    }
-
-    ngOnInit()
-    {
         //debugger;
         this.route.params.subscribe(params => 
         {
             console.log(params['postId']);        
             this.parameters = params;
             console.log(this.parameters['postId']);
+
+            //debugger;
+            this.getPostById(this.parameters['postId']);
         });
-        
-        this.getPostById(this.parameters['postId']);
     }
- 
+
     getPostById(id: number)
     {
-      this.posts = this.postServiceObservable.getPostById(id);
-      //debugger;
-      this.posts.subscribe(data => 
-      {
-          console.log(data);
-          console.log("------------------------------------");
-          console.log(data[0]);
-          console.log("------------------------------------");
-          console.log(data[0].id);
-          this.postList = data;
-          console.log("------------------------------------");
-          console.log(this.postList);
-      });
+        //debugger;
+        this.posts = this.postServiceObservable.getPostById(id);
+        
+        this.posts.subscribe(data => 
+        {
+            console.log('1');
+            console.log(data);
+            this.postDetail = data;
+            console.log(this.postDetail);
+            console.log('2');
+        });
     }
 }

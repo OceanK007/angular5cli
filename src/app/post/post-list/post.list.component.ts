@@ -9,8 +9,8 @@ import { PostServiceObservable } from '../post.service.observable'
 })
 export class PostListComponent implements OnInit
 {
-    posts: Observable<any>;
-    public postList: Array<any> = [];
+    posts: Observable<any>;                // Use it with pipe "| async" since it will automatically subscribe/unsubscribe Observable
+    public postList: Array<any> = [];      // Use it, if you don't want to use pipe "| async" and subscribe Observable explicitly
   
     constructor(private postServiceObservable : PostServiceObservable) { }
   
@@ -25,14 +25,14 @@ export class PostListComponent implements OnInit
       //debugger;
       this.posts.subscribe(data => 
       {
-          console.log(data);
-          console.log("------------------------------------");
-          console.log(data[0]);
-          console.log("------------------------------------");
-          console.log(data[0].id);
+          //console.log(data);
+          //console.log("------------------------------------");
+          //console.log(data[0]);
+          //console.log("------------------------------------");
+          //console.log(data[0].id);
           this.postList = data;
-          console.log("------------------------------------");
-          console.log(this.postList);
+          //console.log("------------------------------------");
+          //console.log(this.postList);
       });
     }
 }
