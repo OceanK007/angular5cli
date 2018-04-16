@@ -43,4 +43,9 @@ export class PostServiceObservable
         //debugger;
         return this.http.get(this.baseUrl + '/posts/'+id, this.options).catch(this.handleError);
     }
+
+    getPostsByPagination(page: number, limit: number) : Observable<any>
+    {
+        return this.http.get(this.baseUrl + '/posts?_page='+page+'&_limit='+limit, this.options).catch(this.handleError);
+    }
 }

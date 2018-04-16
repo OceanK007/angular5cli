@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PostComponent } from './post.component';
 import { PostListComponent } from './post-list/post.list.component';
 import { PostDetailComponent } from './post-detail/post.detail.component';
+import { PostListPaginationComponent } from './post-list-pagination/post.list.pagination.component';
 
 const postRoutes: Routes = 
 [
@@ -15,6 +16,17 @@ const postRoutes: Routes =
             {
                 path: "list",
                 component: PostListComponent,
+                children:
+                [
+                    {
+                        path: "view/:postId",
+                        component: PostDetailComponent
+                    }
+                ]
+            }, 
+            {
+                path: "list-pagination",
+                component: PostListPaginationComponent,
                 children:
                 [
                     {
